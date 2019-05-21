@@ -1,0 +1,19 @@
+    static String charcut(){
+        System.out.println("what would you like to say? "); // scanner to take in string
+        Scanner src = new Scanner(System.in);
+        String pal = src.nextLine();
+        char[] charstring = pal.toCharArray();    // creates char array
+        StringBuilder sb = new StringBuilder();
+        sb.append(pal);                           // appends string to the char array
+        System.out.println("what element would you like to remove");    
+        Scanner remove = new Scanner(System.in);    // creates scanner for which integer number to delete
+        int take = remove.nextInt();
+        sb.deleteCharAt(take);                    //removes the char
+        charstring = sb.toString().toCharArray(); // puts it back into string 
+
+        System.out.println(charstring);           // prints the new string with removed char
+        // you can use the range function of delete by using the following
+        // sb.delete(10,15); which will take the 5 char in that range out.
+
+        return charcut();
+    }
